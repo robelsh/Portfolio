@@ -13,6 +13,8 @@
         <link rel="apple-touch-icon-precomposed" href="assets/images/ico/apple-touch-icon-57-precomposed.jpg">
         <link rel="shortcut icon" href="assets/images/ico/favicon.jpg">
         <link rel="stylesheet" href="assets/style/bootstrap.css" type="text/css" />
+        <script src="assets/js/d3.v2.min.js" type="application/javascript"></script>
+        <script src="assets/js/timeknots.js" type="application/javascript"></script>
     </head>
 
     <body>
@@ -64,49 +66,74 @@
             </div>
         </div>
         <br/>
+
+
         <!-- Cursus -->
         <div class="pages page-cursus" id="page-cursus">
             <div class="container">
                 <header>
                     <h4 class="line-divider">Cursus</h4>
-                    <h2>Mon parcour</h2>
-                    <div class="row">
-                        <div class="span8 offset2">
-                            <h5>Année 2015-2016</h5>
-                            <div class="span8"> <img class="photo" src="assets/images/pages/work/isen.jpg" height="352" widht="470" alt="Treble"> </div>
-                            Élève ingénieur en Master 1, Génie Logicielle àl'ISEN de BREST <br/>
-                            <br/>
-                            <div class="row-fluid">
-                                <div class="span4 center"> &#8250; Réseau CISCO </div>
-                                <div class="span4 center"> &#8250; Java </div>
-                                <div class="span4 center"> &#8250; PHP </div>
-                            </div>
-                            <hr><br/>
-                            <h5>Année 2011-2015</h5>
-                            <div class="span8"> <img class="photo" src="assets/images/pages/work/isen.jpg" height="352" widht="470" alt="Treble"> </div>
-                            Élève ingénieur à l'ISEN de BREST, en Cycle Informatique et Réseau. (CIR)<br/>
-                            <br/>
-                            <div class="row-fluid">
-                                <div class="span4 center"> &#8250; C, C++, JAVA </div>
-                                <div class="span4 center"> &#8250; Langages WEB </div>
-                                <div class="span4 center"> &#8250; Bases de données </div>
-                                <div class="span4 center"> &#8250; Réseau (certifications Cisco) </div>
-                                <div class="span4 center"> &#8250; Gestion de projet </div>
+                    <h2>Mon parcours</h2>
+                    <div class="row"><br/>
+                        <img src="assets/images/pages/work/isen.jpg"/>
+                        <h5>Élève Ingénieur en Master 1 Génie Logiciel à l'ISEN Brest</h5>
+                        <div id="timeline1"></div>
+                        <script type="text/javascript">
+
+                            var timeLine = [{name:"BAC S - Lycée Saint François Notre Dame Lesneven", date: "2011-07-01", img: "assets/images/pages/work/sfnd.jpg"},
+                                                {name:"Première année en cycle informatique et réseau à L'ISEN de Brest", 	date:"2012-09-01", img: "assets/images/pages/work/isen.jpg"},
+                                                {name:"Deuxième Année Cycle INformatique et réseau à L'ISEN de Brest", 	date:"2013-06-13", img: "assets/images/pages/work/isen.jpg"},
+                                                {name:"Troisième Année Cycle INformatique et réseau à L'ISEN de Brest", date:	"2014-09-01", img: "assets/images/pages/work/isen.jpg"},
+                                                {name:"Master 1 - Génie Logiciel à L'ISEN Brest", date:	"2015-10-01", img: "assets/images/pages/work/isen.jpg"}
+
+                                               ];
+
+                            TimeKnots.draw("#timeline1", timeLine, {dateFormat: "%B %Y", color: "#000", width:500, showLabels: true, labelFormat: "%Y"});
+
+                        </script>
 
 
-                            </div>
-                            <hr><br/>
-                            <h5>Année 2010-2011</h5>
-                            <div class="span8"> <img class="photo" src="assets/images/pages/work/sfnd.jpg" height="352" widht="470" alt="Treble"> </div>
-                            BAC S option SVT.<br/>
-                            <br/>
-                            <div class="row-fluid">
-                                <div class="span4 center"> &#8250; Spécialité Physique Chimie </div>
-                                <div class="span4 center"> &#8250; Grec </div>
-                                <div class="span4 center"> &#8250; Arts Plastiques : Nourriture, Attirance ou répulsion. </div>
-                            </div>
-                            <hr>
-                        </div>
+
+                        <!--
+
+
+<div class="span8 offset2">
+<h5>Année 2015-2016</h5>
+<div class="span8"> <img class="photo" src="assets/images/pages/work/isen.jpg" height="352" widht="470" alt="Treble"> </div>
+Élève ingénieur en Master 1, Génie Logicielle àl'ISEN de BREST <br/>
+<br/>
+<div class="row-fluid">
+<div class="span4 center"> &#8250; Réseau CISCO </div>
+<div class="span4 center"> &#8250; Java </div>
+<div class="span4 center"> &#8250; PHP </div>
+</div>
+<hr><br/>
+<h5>Année 2011-2015</h5>
+<div class="span8"> <img class="photo" src="assets/images/pages/work/isen.jpg" height="352" widht="470" alt="Treble"> </div>
+Élève ingénieur à l'ISEN de BREST, en Cycle Informatique et Réseau. (CIR)<br/>
+<br/>
+<div class="row-fluid">
+<div class="span4 center"> &#8250; C, C++, JAVA </div>
+<div class="span4 center"> &#8250; Langages WEB </div>
+<div class="span4 center"> &#8250; Bases de données </div>
+<div class="span4 center"> &#8250; Réseau (certifications Cisco) </div>
+<div class="span4 center"> &#8250; Gestion de projet </div>
+
+
+</div>
+<hr><br/>
+<h5>Année 2010-2011</h5>
+<div class="span8"> <img class="photo" src="assets/images/pages/work/sfnd.jpg" height="352" widht="470" alt="Treble"> </div>
+BAC S option SVT.<br/>
+<br/>
+<div class="row-fluid">
+<div class="span4 center"> &#8250; Spécialité Physique Chimie </div>
+<div class="span4 center"> &#8250; Grec </div>
+<div class="span4 center"> &#8250; Arts Plastiques : Nourriture, Attirance ou répulsion. </div>
+</div>
+<hr>
+</div>
+-->
                     </div>
                 </header>
             </div>
@@ -120,163 +147,97 @@
                 <header>
                     <h4 id="title-compe" class="line-divider">Compétences</h4>
                     <h1></h1>
-                    <!--
-<div class="row">
 
-<div class="span4 menu-c" id="logiciel">Logiciels / IDE</div>
-<div class="span4 menu-c on" id="langage"> Langages </div>
-<div class="span4 menu-c" id="autre-c">BDD / Réseau </div>
+                    <!-- Carousel projet -->
+                    <article>
+                        <div class="row-fluid">
+                            <div class="span8 offset2">
+                                <div class="quote center">
+                                    <div id="quote-slider" class="slide">
+                                        <!-- carousel -->
+                                        <div class="carousel-inner">
+                                            <div class="active item">
+                                                <h5>Stage chez Linedata</h5>
+                                                Réalisation d'une application pour téléphone et tablette. <br/>
+                                                Application permettant le monitoring d'un produit majeure de Linedata<br/>
+                                                <br/>
+                                                <br/><br/>
+                                            </div>
 
+                                            <div class="item">
+                                                <h5>Deuxième année - Projet Java / Web</h5>
+                                                Réalisation d'un site d'administration afin de faciliter la pose des congés des employé d'une entreprise
+                                                Site en PHP, jQuery, CSS, HTML, Javascript. Connexion à une base de donnée afin de stoqué les jours de congés et les informations des employés.
+                                                Application JAVA destiné aux utilisateurs. Elle permet de visualiser ses congés en se connectant avec ses identifiants.<br/><br/> </div>
 
-<div class="span8 offset2">
-
-<p class="logo-lang"><br/>
-WEB : <br/>
-<img src="assets/images/pages/competences/css3.png" width = "100" height="100" alt="css3">
-<img src="assets/images/pages/competences/html5.png" width = "100" height="100" alt="html5">
-<img src="assets/images/pages/competences/js.png" width = "100" height="100" alt="js">
-<img src="assets/images/pages/competences/rwd.png" width = "100" height="100" alt="rwd">
-<img src="assets/images/pages/competences/jquery.png" width = "250" height="150" alt="jquery">
-<img src="assets/images/pages/competences/xml.png" width = "150" height="100" alt="xml">
-<hr></p>
-<p class="logo-lang"><img src="assets/images/pages/competences/java.png" width = "150" height="100" alt="java">
-<img src="assets/images/pages/competences/c++.png" width = "100" height="100" alt="c++">
-<img src="assets/images/pages/competences/php.png" width = "100" height="100" alt="php">
-<img src="assets/images/pages/competences/python.png" width = "100" height="100" alt="python">
-
-<!-- • C, C++, Java, JEE, JSON, Python <br/>
-• WEB : PHP, HTML 5, CSS 3, Javascript, Jquery, XML <br/>
-• Bases de donnée : MySQL, Oracle.<br/>
-• Réseau : CCNA 1-->
-                    <!--
-</p>
-
-<p class="logo-logic"><br/>
-<img src="assets/images/pages/competences/css3.png" width = "100" height="100" alt="langages">
-<img src="assets/images/pages/competences/html5.png" width = "100" height="100" alt="langages">
-<img src="assets/images/pages/competences/js.png" width = "100" height="100" alt="langages">
-<img src="assets/images/pages/competences/rwd.png" width = "100" height="100" alt="langages">
-<img src="assets/images/pages/competences/jquery.png" width = "250" height="150" alt="langages">
-<img src="assets/images/pages/competences/xml.png" width = "150" height="100" alt="langages">
-
-<p class="logo-autre-c"><br/>
-Réseau :<br/><br/>
-<img src="assets/images/pages/competences/cisco.png" width = "200" height="100" alt="cisco"><br/></p><hr class="logo-autre-c">
-<p class="logo-autre-c">
-Base de donnée :<br/><br/>
-<img src="assets/images/pages/competences/oracle.png" width = "200" height="100" alt="oracle">
-<img src="assets/images/pages/competences/mysql.png" width = "200" height="100" alt="mysql">
-
--->
-
-                    <!-- • C, C++, Java, JEE, JSON, Python <br/>
-• WEB : PHP, HTML 5, CSS 3, Javascript, Jquery, XML <br/>
-• Bases de donnée : MySQL, Oracle.<br/>
-• Réseau : CCNA 1-->
-                    </p>
-
-            </div><!--
-<img src="assets/images/pages/competences/logiciels.png" width = "85" height="85" alt="logiciels">
-<p style="text-align:right">  <br/>
-Développement : Eclipse, jGrasp, Notepad++. <br/>
-Base de donnée : Oracle SQL. <br/>
-Modelisation : PowerAMC, argoUML. <br/>
-</p>-->
-
-            <!--
-</div>
-</header>-->
-
-            <!-- Carousel projet -->
-            <article>
-                <div class="row-fluid">
-                    <div class="span8 offset2">
-                        <div class="quote center">
-                            <div id="quote-slider" class="slide">
-                                <!-- carousel -->
-                                <div class="carousel-inner">
-                                    <div class="active item">
-                                        <h5>Stage chez Linedata</h5>
-                                        Réalisation d'une application pour téléphone et tablette. <br/>
-                                        Application permettant le monitoring d'un produit majeure de Linedata<br/>
-                                        <br/>
-                                        <br/><br/>
+                                            <div class="item">
+                                                <h5>Première année - Projet C</h5>
+                                                Réalisation d'un jeux en langage C avec la librairie SDL. <br/>
+                                                Un robot doit trouver la sortie d'un labyrinthe. <br/>
+                                                <br/>
+                                                <br/><br/>
+                                            </div>
+                                            <div class="item">
+                                                <h5>Première année - Projet Web</h5>
+                                                Réalisation d'un site perso en Javascript/HTML/CSS. <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/><br/>
+                                            </div>
+                                            <br/>
+                                        </div>
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#quote-slider" data-slide-to="0" class="active"></li>
+                                            <li data-target="#quote-slider" data-slide-to="1"></li>
+                                            <li data-target="#quote-slider" data-slide-to="2"></li>
+                                            <li data-target="#quote-slider" data-slide-to="3"></li>
+                                        </ol>
                                     </div>
-
-                                    <div class="item">
-                                        <h5>Deuxième année - Projet Java / Web</h5>
-                                        Réalisation d'un site d'administration afin de faciliter la pose des congés des employé d'une entreprise
-                                        Site en PHP, jQuery, CSS, HTML, Javascript. Connexion à une base de donnée afin de stoqué les jours de congés et les informations des employés.
-                                        Application JAVA destiné aux utilisateurs. Elle permet de visualiser ses congés en se connectant avec ses identifiants.<br/><br/> </div>
-
-                                    <div class="item">
-                                        <h5>Première année - Projet C</h5>
-                                        Réalisation d'un jeux en langage C avec la librairie SDL. <br/>
-                                        Un robot doit trouver la sortie d'un labyrinthe. <br/>
-                                        <br/>
-                                        <br/><br/>
-                                    </div>
-                                    <div class="item">
-                                        <h5>Première année - Projet Web</h5>
-                                        Réalisation d'un site perso en Javascript/HTML/CSS. <br/>
-                                        <br/>
-                                        <br/>
-                                        <br/><br/>
-                                    </div>
-                                    <br/>
                                 </div>
-                                <ol class="carousel-indicators">
-                                    <li data-target="#quote-slider" data-slide-to="0" class="active"></li>
-                                    <li data-target="#quote-slider" data-slide-to="1"></li>
-                                    <li data-target="#quote-slider" data-slide-to="2"></li>
-                                    <li data-target="#quote-slider" data-slide-to="3"></li>
-                                </ol>
                             </div>
                         </div>
+
+                    </article>
+                    <!-- Fin Carousel projet -->
+
                     </div>
-                </div>
+            </div>
 
-            </article>
-            <!-- Fin Carousel projet -->
+            <!-- Fin compétences  -->
 
+            <br/>
+
+            <!-- experience -->
+            <div class="pages page-experiences" id="page-experiences">
+                <div class="container">
+                    <header>
+                        <h4 class="line-divider">Expériences</h4>
+                    </header>
+                    <p>
+
+                    <div class="span8 offset2"><h5>2014 - 2015</h5></div>
+
+                    <div class="row offset2" >
+                        <div class="span8 exp" style="margin-left: 0px;">
+                            <div class="span2">
+                                <a href="#"><img  src="assets/images/pages/experiences/NCR.png" alt="NCR"></a>
+                            </div>
+                            <div class="span5"style="margin-top: 18px;">
+                                Contrat de professionnalisation d'un ans chez NCR Corporation </br>
+                        </div>
+                        </br> </br> </br>
         </div>
         </div>
 
-    <!-- Fin compétences  -->
-
-    <br/>
-
-    <!-- experience -->
-    <div class="pages page-experiences" id="page-experiences">
-        <div class="container">
-            <header>
-                <h4 class="line-divider">Expériences</h4>
-            </header>
-            <p>
-
-            <div class="span8 offset2"><h5>2014 - 2015</h5></div>
-
-            <div class="row offset2" >
-                <div class="span8 exp" style="margin-left: 0px;">
-                    <div class="span2">
-                        <a href="#"><img  src="assets/images/pages/experiences/NCR.png" alt="NCR"></a>
-                    </div>
-                    <div class="span5"style="margin-top: 18px;">
-                        Contrat de professionnalisation d'un ans chez NCR Corporation </br>
-                </div>
-                </br> </br> </br>
+    <div class="span8 offset2"><hr><h5>2014</h5></div>
+    <div class="row offset2">
+        <div class="span8 exp" style="margin-left: 0px;">
+            <div class="span2">
+                <a href="#"><img  src="assets/images/pages/experiences/telecom.png" alt="Telecom Bretagne"></a>
+            </div>
+            <div class="span5">
+                </br> </br></br>Stage professionnelle chez Télécom Bretagne de plus de 2 mois
     </div>
-</div>
-
-<div class="span8 offset2"><hr><h5>2014</h5></div>
-<div class="row offset2">
-    <div class="span8 exp" style="margin-left: 0px;">
-        <div class="span2">
-            <a href="#"><img  src="assets/images/pages/experiences/telecom.png" alt="Telecom Bretagne"></a>
-        </div>
-        <div class="span§">
-            </br> </br></br>Stage professionnelle chez Télécom Bretagne de plus de 2 mois
-</div>
 </div>
 </br> </br> </br>
 </div>
@@ -289,8 +250,8 @@ Modelisation : PowerAMC, argoUML. <br/>
             <a href="#"><img  src="assets/images/pages/experiences/linedata.png" alt="LineData"></a>
         </div>
         <div class="span5">
-            </br>  Stage professionnelle chez LineData Services à Arcueil de deux mois </br>
-</div>
+            Stage professionnelle chez LineData Services à Arcueil de deux mois </br>
+    </div>
 </div>
 </div>
 </p>
@@ -409,7 +370,6 @@ Modelisation : PowerAMC, argoUML. <br/>
 <!-- INITIALIZE -->
 <script src="assets/js/application/application.min.js" type="text/javascript"></script>
 <script src="assets/js/js.js" type="text/javascript"></script>
-
 
 </body>
 </html>
