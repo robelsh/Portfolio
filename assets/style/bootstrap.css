@@ -896,6 +896,7 @@ footer {
 .social-icons {
     display: table
 }
+
 .social-icons a {
     display: table-cell
 }
@@ -929,17 +930,30 @@ footer {
 .sicon-mail i {
     background-position: -117px 0
 }
+
+.sicon-mail :hover {
+        opacity:0.5;
+}
 .sicon-clock i {
     background-position: -157px 0
 }
 .sicon-facebook i {
     background-position: -197px 0
 }
+.sicon-facebook :hover {
+    opacity:0.5;
+}
 .sicon-twitter i {
     background-position: -237px -1px
 }
+.sicon-twitter :hover {
+    opacity:0.5;
+}
 .sicon-linkedin i {
     background-position: -277px -1px
+}
+.sicon-linkedin :hover {
+    opacity:0.5;
 }
 .sicon-youtube i {
     background-position: -317px -1px
