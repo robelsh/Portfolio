@@ -10,7 +10,6 @@ html{
     text-align: center;
 }
 #logo{
-    margin-top: 12px;
     cursor: pointer;
 }
 #logo:hover{
@@ -26,9 +25,7 @@ html{
     cursor:pointer;
     transition:all 1s;
 }
-#title-compe{
-    color:#FFF;
-}
+
 
 .menu-c{
     font-size:20px;
@@ -437,7 +434,12 @@ html{
     margin-left: 5px;
     margin-right: 5px
 }
-.page-benevolat {
+
+.page-benevolat{
+    color:#bbb;
+}
+
+.page-projet {
     position:relative;
     background: url(../images/pages/benevolat/background.jpg) 50% 0 no-repeat fixed;
     -webkit-background-size: cover;
@@ -445,6 +447,7 @@ html{
     -o-background-size: cover;
     background-size: cover;
 }
+
 .page-benevolat h5 {
     margin-bottom: 12px
 }
@@ -461,7 +464,6 @@ html{
     padding: 3px 8px;
     margin: 0 3px;
     position: relative;
-    background-color: #bbb
 }
 .page-benevolat .read-more a:hover, .page-benevolat .read-more a.active {
     background-color: #4e808e;
@@ -490,7 +492,6 @@ html{
     background-color: #bbb
 }
 .page-benevolat-list .read-more a:hover, .page-benevolat-list .read-more a.active {
-    background-color: #4e808e;
     text-decoration: none;
     color: #fff
 }
@@ -5724,6 +5725,12 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 
 }
 
+@media(min-width:768px){
+    #logo{
+        width: 150px;
+    }
+}
+
 @media(max-width:767px) {
     .hidden-desktop {
         display: inherit!important
@@ -6423,6 +6430,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
         position: absolute;
         top:0px;
         left:0px;
+        width: 250px;
     }
     html, body {
         font-size: 15.200000000000001px;
