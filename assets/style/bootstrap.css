@@ -14,7 +14,13 @@ html{
 
 }
 .logoComp{
-    width:100px;
+    width:70px;
+}
+.logoComp2{
+    width:170px;
+}
+.logoComp3{
+    width:120px;
 }
 .logo{
     overflow:hidden;
