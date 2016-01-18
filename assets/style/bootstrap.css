@@ -11,6 +11,18 @@ html{
 }
 #logo{
     cursor: pointer;
+
+}
+.logoComp{
+    width:100px;
+}
+.logo{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50%;
+    border: solid grey 4px;
+
 }
 #logo:hover{
     cursor: pointer;
