@@ -1,10 +1,10 @@
 @font-face {
-    font-family: "sanfrancisco";
-    src:url(../fonts/sanfrancisco.ttf);
+    font-family: "avenirnext";
+    src:url(../fonts/AvenirNext-Regular.ttf);
 }
 
 html{
-    font-family: "sanfrancisco";
+    font-family: "avenirnext";
 }
 .foot {
     text-align: center;
@@ -457,7 +457,7 @@ html{
     color:#bbb;
 }
 
-.page-projet {
+.page-competences {
     position:relative;
     background: url(../images/pages/benevolat/background.jpg) 50% 0 no-repeat fixed;
     -webkit-background-size: cover;
@@ -465,6 +465,16 @@ html{
     -o-background-size: cover;
     background-size: cover;
 }
+
+.page-experiences {
+    position:relative;
+    background: url(../images/pages/benevolat/background.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 .page-benevolat h5 {
     margin-bottom: 12px
